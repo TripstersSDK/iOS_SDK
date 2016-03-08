@@ -1,0 +1,16 @@
+/* 
+  DemoLocalizable.strings
+  TripstersSDKDemo
+
+  Created by TimTiger on 16/2/22.
+  Copyright © 2016年 Tripsters. All rights reserved.
+*/
+//Refresh
+"Release to refresh..."="松开刷新";
+"Pull down to refresh..."="下拉刷新";
+"Loading..."="加载中...";
+"Last Updated: "="上次刷新：";
+
+"Load More" = "加载更多";
+"No More" = "没有更多了";
+"Loading..." = "加载中...";
