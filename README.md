@@ -53,6 +53,7 @@
     } failure:^(QPSAuthReq *req, NSError *error) {
         //登录失败
     }];
+
     [QPSApi logoutWithSuccessHandler:^{
         //登出成功
     } failure:^(NSError *error) {
