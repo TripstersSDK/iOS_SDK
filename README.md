@@ -20,32 +20,31 @@
     </code></pre>
  2）注册推送，调用QPSApi的接口处理推送  
     <pre><code>
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-//注册应用
-[QPSApi registerApp:@"beichen" withMode:QPSDataModeAll];
+    - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+        //注册应用
+        [QPSApi registerApp:@"beichen" withMode:QPSDataModeAll];
+        //iOS8+ register APNS
+        if (AVAILABLE_IOS8) {
+            UIUserNotificationType notificationTypes = (UIUserNotificationTypeBadge | UIUserNotificationTypeSound | UIUserNotificationTypeAlert);
+            UIUserNotificationSettings *settings  = [UIUserNotificationSettings settingsForTypes:notificationTypes categories:nil];
+            [application registerUserNotificationSettings:settings];
+        } else {
+            UIRemoteNotificationType notificationTypes  = (UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeSound | UIRemoteNotificationTypeAlert);
+            [application registerForRemoteNotificationTypes:notificationTypes];
+        }
+        return YES;
+    }  
 
-//iOS8+ register APNS
-if (AVAILABLE_IOS8) {
-UIUserNotificationType notificationTypes = (UIUserNotificationTypeBadge | UIUserNotificationTypeSound | UIUserNotificationTypeAlert);
-UIUserNotificationSettings *settings  = [UIUserNotificationSettings settingsForTypes:notificationTypes categories:nil];
-[application registerUserNotificationSettings:settings];
-} else {
-UIRemoteNotificationType notificationTypes  = (UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeSound | UIRemoteNotificationTypeAlert);
-[application registerForRemoteNotificationTypes:notificationTypes];
-}
-return YES;
-}
+    - (void)application:(UIApplication *)application didRegisterUserNotificationSettings:(UIUserNotificationSettings *)notificationSettings {
+        [application registerForRemoteNotifications];
+    }
 
-- (void)application:(UIApplication *)application didRegisterUserNotificationSettings:(UIUserNotificationSettings *)notificationSettings {
-[application registerForRemoteNotifications];
-}
+    - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
+        [QPSApi registerDeviceToken:deviceToken];
+    }
 
-- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
-[QPSApi registerDeviceToken:deviceToken];
-}
-
-- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
-[QPSApi handleNotification:userInfo];
-}
+    - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
+        [QPSApi handleNotification:userInfo];
+    }
     </code></pre>
 
