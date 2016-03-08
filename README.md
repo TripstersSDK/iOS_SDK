@@ -44,7 +44,7 @@
         [QPSApi handleNotification:userInfo];
     }
     </code></pre>  
-3.接口的使用
+3.接口的使用  
     1）账号登录和退出接口  
     被接入应用应该在账号登录和退出接口中 加入QPSApi的登录和退出 让趣皮士SDK的账号状态与接入应用账号状态一致  
     <pre><code>
@@ -52,8 +52,7 @@
         //登录成功
     } failure:^(QPSAuthReq *req, NSError *error) {
         //登录失败
-    }];  
-
+    }];
     [QPSApi logoutWithSuccessHandler:^{
         //登出成功
     } failure:^(NSError *error) {
