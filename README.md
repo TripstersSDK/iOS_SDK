@@ -1,5 +1,5 @@
 # iOS SDK
-趣皮士问答模块SDK  
+一个便于合作应用使用趣皮士问答API的SDK  
 LibTripstersSDK_device      真机上可运行的SDK，发布应用时使用  
 LibTripstersSDK_simulator  模拟器和真机都可运行SDK， 调试时使用  
 TripstersSDKDemo             demo工程
