@@ -1,5 +1,5 @@
-# iOS_SDK
-趣皮士开放平台iOS SDK
+# iOS SDK
+趣皮士问答模块SDK
 
 # 使用说明
 1.配置SDK  
