@@ -16,13 +16,14 @@ TripstersSDKDemo             demo工程
 
 2.初始化SDK  
   1）程序启动时调用初始化函数  
-    ```php
+```objc
     - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
         //注册应用
         [QPSApi registerApp:@"beichen" withMode:QPSDataModeAll];
         return YES;
     }
-    ```
+```
+
  2）注册推送，调用QPSApi的接口处理推送  
     <pre><code>
     - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
