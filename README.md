@@ -15,8 +15,8 @@ TripstersSDKDemo             demo工程
   3）info.plist 中设置允许 http网络请求  
 
 2.初始化SDK  
-  1）程序启动时调用初始化函数
-    ```objc
+  1）程序启动时调用初始化函数  
+    ```php
     - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
         //注册应用
         [QPSApi registerApp:@"beichen" withMode:QPSDataModeAll];
