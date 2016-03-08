@@ -58,6 +58,7 @@
     } failure:^(NSError *error) {
         //登出失败    
     }];
-    </code></pre>
+    </code></pre>  
+    2）利用QPSApi.h中的其它接口，获取想要的数据
    
 
