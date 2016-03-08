@@ -15,7 +15,7 @@ TripstersSDKDemo             demo工程
   3）info.plist 中设置允许 http网络请求  
 
 ### 2.初始化SDK  
-  1）程序启动时调用初始化函数  
+1）程序启动时调用初始化函数  
 ```objc
     - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
         //注册应用
@@ -24,7 +24,7 @@ TripstersSDKDemo             demo工程
     }
 ```
 
- 2）注册推送，调用QPSApi的接口处理推送  
+2）注册推送，调用QPSApi的接口处理推送  
 ```objc
     - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
         //注册应用
@@ -55,7 +55,7 @@ TripstersSDKDemo             demo工程
 ```
 
 ### 3.接口的使用  
-    1）账号登录和退出接口  
+1）账号登录和退出接口  
     被接入应用应该在账号登录和退出接口中 加入QPSApi的登录和退出 让趣皮士SDK的账号状态与接入应用账号状态一致  
 ```objc
     [QPSApi loginWithReq:req success:^(QPSAuthReq *req) {
@@ -71,6 +71,6 @@ TripstersSDKDemo             demo工程
     }];
 ```
 
-    2）利用QPSApi.h中的其它接口，获取数据。具体使用请见demo
+2）利用QPSApi.h中的其它接口，获取数据。具体使用请见demo
    
 
