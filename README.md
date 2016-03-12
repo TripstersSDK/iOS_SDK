@@ -20,7 +20,7 @@ SDK类文档                        类文档
 ```objc
     - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
         //注册应用
-        [QPSApi registerApp:@"beichen" withMode:QPSDataModeAll];
+        [QPSApi registerApp:launchOptions appId:@"beichen" withMode:QPSDataModeAll isDebug:YES];
         return YES;
     }
 ```
@@ -29,7 +29,7 @@ SDK类文档                        类文档
 ```objc
     - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
         //注册应用
-        [QPSApi registerApp:@"beichen" withMode:QPSDataModeAll];
+        [QPSApi registerApp:launchOptions appId:@"beichen" withMode:QPSDataModeAll isDebug:YES];
         //iOS8+ register APNS
         if (AVAILABLE_IOS8) {
             UIUserNotificationType notificationTypes = (UIUserNotificationTypeBadge | UIUserNotificationTypeSound | UIUserNotificationTypeAlert);
