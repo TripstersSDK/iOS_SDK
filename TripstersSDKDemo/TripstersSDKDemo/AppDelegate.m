@@ -22,7 +22,7 @@
 //    self.window.backgroundColor = [UIColor whiteColor];
     
     //注册应用
-    [QPSApi registerApp:@"beichen" withMode:QPSDataModeAll];
+    [QPSApi registerApp:launchOptions appId:@"beichen" withMode:QPSDataModeAll isDebug:YES];
     
     //iOS8+ register APNS
     if (AVAILABLE_IOS8) {

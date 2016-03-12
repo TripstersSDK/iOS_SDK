@@ -18,12 +18,15 @@
 /*!
  *  @brief 应用注册 ,应用启动后调用
  *
- * @attention 请保证在主线程中调用此函数
+ *  @attention 请保证在主线程中调用此函数
+ * @param
+ *     launchOptions - App 启动时系统提供的参数，表明了 App 是通过什么方式启动的
  *  @param appid 开放平台应用id
  *  @param mode 数据获取模式 QPSDataModeOwn ，QPSDataModeAll
+ *  @param debug 调试时请设置YES, 发布时应用设置NO
  *
  */
-+(BOOL)registerApp:(NSString *)appid withMode:(QPSDataMode *)mode;
++(BOOL)registerApp:(NSDictionary *)launchOptions appId:(NSString *)appid withMode:(QPSDataMode *)mode isDebug:(BOOL)debug;
 
 /*!
  *  用户认证
@@ -128,7 +131,7 @@
  *  获取问题详细信息
  *
  *  @param req     请求参数
- *  @param success 成功回调 返回回答ID
+ *  @param success 成功回调
  *  @param failure 失败回调
  */
 +(void)getQuestionDetailWithReq:(QPSQuestionDetailReq *)req success:(void (^)(QPSQuestionDetailReq *req,QPSQuestion *question))success failure:(void (^)(QPSQuestionDetailReq *req,NSError *error))failure;
@@ -146,7 +149,7 @@
  *  获取用户回答列表
  *
  *  @param req     请求参数
- *  @param success 成功回调 返回回答ID
+ *  @param success 成功回调 返回QPSAnswer数组
  *  @param failure 失败回调
  */
 +(void)getUserAnswerListWithReq:(QPSUserAnswerListReq *)req success:(void (^)(QPSUserAnswerListReq *req,NSArray *responseObject))success failure:(void (^)(QPSUserAnswerListReq *req,NSError *error))failure;
@@ -155,7 +158,7 @@
  *  获取用户问题列表
  *
  *  @param req     请求参数
- *  @param success 成功回调 返回回答ID
+ *  @param success 成功回调 返回QPSQuestion数组
  *  @param failure 失败回调
  */
 +(void)getUserQuestionListWithReq:(QPSUserQuestionListReq *)req success:(void (^)(QPSUserQuestionListReq *req,NSArray *responseObject))success failure:(void (^)(QPSUserQuestionListReq *req,NSError *error))failure;
@@ -164,7 +167,7 @@
  *  获取用户收到的回答列表
  *
  *  @param req     请求参数
- *  @param success 成功回调 返回回答ID
+ *  @param success 成功回调, 返回QPSAnswer数组
  *  @param failure 失败回调
  */
 +(void)getUserReceivedAnswerListWithReq:(QPSUserReceivedAnswerListReq *)req success:(void (^)(QPSUserReceivedAnswerListReq *req,NSArray *responseObject))success failure:(void (^)(QPSUserReceivedAnswerListReq *req,NSError *error))failure;
