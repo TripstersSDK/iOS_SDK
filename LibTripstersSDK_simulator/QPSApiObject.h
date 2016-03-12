@@ -290,10 +290,9 @@ NS_AVAILABLE_IOS(6_0)
  */
 NS_AVAILABLE_IOS(6_0)
 @interface QPSQuestionDetailReq: QPSBaseReq
-/** 接收者 */
+/** 问题 */
 @property (nonatomic,strong) QPSQuestion *question;
 @end
-
 
 /*!
  *  用户问题列表
