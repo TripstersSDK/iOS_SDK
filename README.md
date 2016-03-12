@@ -4,7 +4,8 @@
 
 LibTripstersSDK_device      真机上可运行的SDK，发布应用时使用  
 LibTripstersSDK_simulator  模拟器和真机都可运行SDK， 调试时使用  
-TripstersSDKDemo             demo工程
+TripstersSDKDemo             demo工程  
+SDK类文档                        类文档
 
 ## 使用说明
 ### 1.配置SDK  
