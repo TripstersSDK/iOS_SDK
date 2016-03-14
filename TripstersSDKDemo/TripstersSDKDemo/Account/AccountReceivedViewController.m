@@ -10,7 +10,7 @@
 #import "AnswerTableViewCell.h"
 #import "AnswerListViewController.h"
 #import "QPSApi.h"
-#import "AccountInfoViewController.h"
+#import "AccountOtherInfoViewController.h"
 
 @interface AccountReceivedViewController () <AnswerTableViewCellDelegate>
 @property (nonatomic,strong) QPSUserReceivedAnswerListReq *request;
@@ -30,7 +30,6 @@
 
 - (void)initView {
     [super initView];
-    self.title = @"收到的回复";
     [self setLeftItemWithTitle:@"返回"];
 }
 
@@ -84,7 +83,7 @@
     NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
     QPSAnswer *answer = [self.dataArray objectAtIndex:indexPath.row];
     UIStoryboard *story = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    AccountInfoViewController *infoVC  = [story instantiateViewControllerWithIdentifier:@"AccountInfoViewController"];
+    AccountOtherInfoViewController *infoVC  = [story instantiateViewControllerWithIdentifier:@"AccountOtherInfoViewController"];
     infoVC.user = answer.answerer;
     [self pushViewController:infoVC];
 }

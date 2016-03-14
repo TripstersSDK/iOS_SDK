@@ -10,7 +10,7 @@
 #import "AnswerListViewController.h"
 #import "QPSApi.h"
 #import "QuestionTableViewCell.h"
-#import "AccountInfoViewController.h"
+#import "AccountOtherInfoViewController.h"
 
 @interface AccountQuestionsViewController () <QuestionTableViewCellDelegate>
 
@@ -84,7 +84,7 @@
     NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
     QPSQuestion *question = [self.dataArray objectAtIndex:indexPath.row];
     UIStoryboard *story = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    AccountInfoViewController *infoVC  = [story instantiateViewControllerWithIdentifier:@"AccountInfoViewController"];
+    AccountOtherInfoViewController *infoVC  = [story instantiateViewControllerWithIdentifier:@"AccountOtherInfoViewController"];
     infoVC.user = question.asker;
     [self pushViewController:infoVC];
 }

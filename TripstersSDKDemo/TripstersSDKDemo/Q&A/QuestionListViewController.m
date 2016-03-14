@@ -17,7 +17,7 @@
 #import "QPSApiObject+Extension.h"
 #import "NSDictionary+Extension.h"
 #import "QuestionTableViewCell.h"
-#import "AccountInfoViewController.h"
+#import "AccountOtherInfoViewController.h"
 
 @interface QuestionListViewController () <EGOTableViewDelegate,QuestionTableViewCellDelegate>
 
@@ -156,7 +156,7 @@
     NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
     QPSQuestion *question = [self.dataArray objectAtIndex:indexPath.row];
     UIStoryboard *story = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    AccountInfoViewController *infoVC  = [story instantiateViewControllerWithIdentifier:@"AccountInfoViewController"];
+    AccountOtherInfoViewController *infoVC  = [story instantiateViewControllerWithIdentifier:@"AccountOtherInfoViewController"];
     infoVC.user = question.asker;
     [self pushViewController:infoVC];
 }

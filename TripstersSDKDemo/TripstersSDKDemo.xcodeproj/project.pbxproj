@@ -21,6 +21,9 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		AE124C1F1C96738C00C4BAD4 /* DemoUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = AE124C1E1C96738C00C4BAD4 /* DemoUserInfo.m */; };
+		AE124C221C9697F300C4BAD4 /* DemoAccountManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AE124C211C9697F300C4BAD4 /* DemoAccountManager.m */; };
+		AE124C251C96AD5200C4BAD4 /* AccountOtherInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE124C241C96AD5200C4BAD4 /* AccountOtherInfoViewController.m */; };
 		AE4B94351C7EB6D600B66AB6 /* NSArray+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = AE4B942E1C7EB6D600B66AB6 /* NSArray+Extension.m */; };
 		AE4B94361C7EB6D600B66AB6 /* NSDictionary+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = AE4B94301C7EB6D600B66AB6 /* NSDictionary+Extension.m */; };
 		AE4B94371C7EB6D600B66AB6 /* NSError+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = AE4B94321C7EB6D600B66AB6 /* NSError+Extension.m */; };
@@ -124,6 +127,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AE124C1D1C96738C00C4BAD4 /* DemoUserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoUserInfo.h; sourceTree = "<group>"; };
+		AE124C1E1C96738C00C4BAD4 /* DemoUserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoUserInfo.m; sourceTree = "<group>"; };
+		AE124C201C9697F300C4BAD4 /* DemoAccountManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoAccountManager.h; sourceTree = "<group>"; };
+		AE124C211C9697F300C4BAD4 /* DemoAccountManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoAccountManager.m; sourceTree = "<group>"; };
+		AE124C231C96AD5200C4BAD4 /* AccountOtherInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountOtherInfoViewController.h; sourceTree = "<group>"; };
+		AE124C241C96AD5200C4BAD4 /* AccountOtherInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountOtherInfoViewController.m; sourceTree = "<group>"; };
 		AE4B942D1C7EB6D600B66AB6 /* NSArray+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Extension.h"; sourceTree = "<group>"; };
 		AE4B942E1C7EB6D600B66AB6 /* NSArray+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Extension.m"; sourceTree = "<group>"; };
 		AE4B942F1C7EB6D600B66AB6 /* NSDictionary+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Extension.h"; sourceTree = "<group>"; };
@@ -481,6 +490,12 @@
 				AE9575561C8597D7003EA0E5 /* AccountReceivedViewController.m */,
 				AEBE91841C86F04C00C05B7B /* AccountInfoViewController.h */,
 				AEBE91851C86F04C00C05B7B /* AccountInfoViewController.m */,
+				AE124C1D1C96738C00C4BAD4 /* DemoUserInfo.h */,
+				AE124C1E1C96738C00C4BAD4 /* DemoUserInfo.m */,
+				AE124C201C9697F300C4BAD4 /* DemoAccountManager.h */,
+				AE124C211C9697F300C4BAD4 /* DemoAccountManager.m */,
+				AE124C231C96AD5200C4BAD4 /* AccountOtherInfoViewController.h */,
+				AE124C241C96AD5200C4BAD4 /* AccountOtherInfoViewController.m */,
 			);
 			path = Account;
 			sourceTree = "<group>";
@@ -775,7 +790,9 @@
 				AE4B94481C7F1A2000B66AB6 /* AnswerListViewController.m in Sources */,
 				AE9575571C8597D7003EA0E5 /* AccountReceivedViewController.m in Sources */,
 				AE4B94351C7EB6D600B66AB6 /* NSArray+Extension.m in Sources */,
+				AE124C251C96AD5200C4BAD4 /* AccountOtherInfoViewController.m in Sources */,
 				AE9C78411C784B4600FEC598 /* CountryListViewController.m in Sources */,
+				AE124C221C9697F300C4BAD4 /* DemoAccountManager.m in Sources */,
 				AEBE91831C86EC5100C05B7B /* QuestionTableViewCell.m in Sources */,
 				AE9C78441C78508300FEC598 /* QAManager.m in Sources */,
 				AE7FED461C7D635100060028 /* UIImageView+WebCache.m in Sources */,
@@ -797,6 +814,7 @@
 				AE7FED3D1C7D635100060028 /* SDWebImageDownloader.m in Sources */,
 				AE95754D1C8592B4003EA0E5 /* QPSApiObject+Extension.m in Sources */,
 				AE7FED421C7D635100060028 /* UIImage+GIF.m in Sources */,
+				AE124C1F1C96738C00C4BAD4 /* DemoUserInfo.m in Sources */,
 				AE4B94381C7EB6D600B66AB6 /* NSString+Extension.m in Sources */,
 				AE4B948D1C84674600B66AB6 /* AnswerTableViewCell.m in Sources */,
 				AE9C78351C78100100FEC598 /* EGORefreshTableHeaderView.m in Sources */,
@@ -963,7 +981,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: li antony (549L5MK4YZ)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = TripstersSDKDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
@@ -976,7 +994,7 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = tripsters.tripsterssdk;
 				PRODUCT_NAME = "SDK Demo";
-				PROVISIONING_PROFILE = "88776c41-39ec-4809-9e8d-e61fd84bb701";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -985,8 +1003,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: li antony (S5EH29NEDH)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: li antony (S5EH29NEDH)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = TripstersSDKDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
@@ -999,7 +1017,7 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = tripsters.tripsterssdk;
 				PRODUCT_NAME = "SDK Demo";
-				PROVISIONING_PROFILE = "00ac495e-f0c0-4b33-bc45-259e3c187706";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

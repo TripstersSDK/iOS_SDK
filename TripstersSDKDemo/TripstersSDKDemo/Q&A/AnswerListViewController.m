@@ -14,7 +14,7 @@
 #import "SendAnswerViewController.h"
 #import "Macro.h"
 #import "SendReAnswerViewController.h"
-#import "AccountInfoViewController.h"
+#import "AccountOtherInfoViewController.h"
 
 @interface AnswerListViewController () <AnswerTableViewCellDelegate>
 
@@ -155,7 +155,7 @@
     NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
     QPSAnswer *answer = [self.dataArray objectAtIndex:indexPath.row];
     UIStoryboard *story = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    AccountInfoViewController *infoVC  = [story instantiateViewControllerWithIdentifier:@"AccountInfoViewController"];
+    AccountOtherInfoViewController *infoVC  = [story instantiateViewControllerWithIdentifier:@"AccountOtherInfoViewController"];
     infoVC.user = answer.answerer;
     [self pushViewController:infoVC];
 }

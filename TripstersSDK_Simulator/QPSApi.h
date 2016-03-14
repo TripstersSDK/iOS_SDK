@@ -37,7 +37,7 @@
  *  @param success 成功回调
  *  @param failure 失败回调
  */
-+(void)loginWithReq:(QPSAuthReq *)req success:(void (^)(QPSAuthReq *req))success failure:(void (^)(QPSAuthReq *req,NSError *error))failure;
++(void)loginWithReq:(QPSAuthReq *)req success:(void (^)(QPSAuthReq *req,QPSUser *user))success failure:(void (^)(QPSAuthReq *req,NSError *error))failure;
 
 /*!
  *  取消授权
@@ -137,13 +137,6 @@
 +(void)getQuestionDetailWithReq:(QPSQuestionDetailReq *)req success:(void (^)(QPSQuestionDetailReq *req,QPSQuestion *question))success failure:(void (^)(QPSQuestionDetailReq *req,NSError *error))failure;
 
 #pragma mark - Account
-
-/*!
- *  获取当前用户的信息
- *
- *  @return QPSUser
- */
-+(QPSUser *)getUserInfo;
 
 /*!
  *  获取用户回答列表
