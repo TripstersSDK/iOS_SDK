@@ -136,6 +136,8 @@ NS_AVAILABLE_IOS(6_0)
 @property (nonatomic,copy) NSString *avatar;
 @property (nonatomic,copy) QPSUserIdentity *identity;
 @property (nonatomic,copy) QPSUserGender *gender;
+/** 是否是接入平台自己的用户 */
+@property (nonatomic,readwrite) BOOL isOwn;
 @property (nullable,nonatomic,copy) NSString *country;
 /** 第三方接入平台 自身的用户id */
 @property (nullable,nonatomic,copy) NSString  *openid;

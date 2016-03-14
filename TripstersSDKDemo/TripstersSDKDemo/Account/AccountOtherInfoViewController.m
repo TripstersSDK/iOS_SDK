@@ -23,6 +23,8 @@
     [self.avatarView sd_setImageWithURL:[NSURL URLWithString:self.user.avatar]];
     self.nicknameLabel.text = self.user.nickname;
     self.identityLabel.text = self.user.identityString;
+    
+    NSLog(@"%d",self.user.isOwn);
 }
 
 - (void)onLeftItemAction:(UIButton *)sender {

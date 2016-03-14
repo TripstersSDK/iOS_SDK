@@ -28,7 +28,6 @@
 		AE4B94361C7EB6D600B66AB6 /* NSDictionary+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = AE4B94301C7EB6D600B66AB6 /* NSDictionary+Extension.m */; };
 		AE4B94371C7EB6D600B66AB6 /* NSError+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = AE4B94321C7EB6D600B66AB6 /* NSError+Extension.m */; };
 		AE4B94381C7EB6D600B66AB6 /* NSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = AE4B94341C7EB6D600B66AB6 /* NSString+Extension.m */; };
-		AE4B943C1C7EBCFF00B66AB6 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE4B943B1C7EBCFF00B66AB6 /* MainViewController.m */; };
 		AE4B94401C7EC8A600B66AB6 /* qa_tab_hightlight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AE4B943E1C7EC8A600B66AB6 /* qa_tab_hightlight@2x.png */; };
 		AE4B94411C7EC8A600B66AB6 /* qa_tab_normal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AE4B943F1C7EC8A600B66AB6 /* qa_tab_normal@2x.png */; };
 		AE4B94481C7F1A2000B66AB6 /* AnswerListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE4B94471C7F1A2000B66AB6 /* AnswerListViewController.m */; };
@@ -141,8 +140,6 @@
 		AE4B94321C7EB6D600B66AB6 /* NSError+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSError+Extension.m"; sourceTree = "<group>"; };
 		AE4B94331C7EB6D600B66AB6 /* NSString+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extension.h"; sourceTree = "<group>"; };
 		AE4B94341C7EB6D600B66AB6 /* NSString+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extension.m"; sourceTree = "<group>"; };
-		AE4B943A1C7EBCFF00B66AB6 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
-		AE4B943B1C7EBCFF00B66AB6 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		AE4B943E1C7EC8A600B66AB6 /* qa_tab_hightlight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "qa_tab_hightlight@2x.png"; sourceTree = "<group>"; };
 		AE4B943F1C7EC8A600B66AB6 /* qa_tab_normal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "qa_tab_normal@2x.png"; sourceTree = "<group>"; };
 		AE4B94461C7F1A2000B66AB6 /* AnswerListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnswerListViewController.h; sourceTree = "<group>"; };
@@ -317,8 +314,6 @@
 				AE7FED141C7C54DA00060028 /* Images.xcassets */,
 				AE93F3ED1C76C3A6009845A0 /* Main.storyboard */,
 				AE93F3F51C76C3A6009845A0 /* Info.plist */,
-				AE4B943A1C7EBCFF00B66AB6 /* MainViewController.h */,
-				AE4B943B1C7EBCFF00B66AB6 /* MainViewController.m */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -809,7 +804,6 @@
 				AE4B94361C7EB6D600B66AB6 /* NSDictionary+Extension.m in Sources */,
 				AE7FED3E1C7D635100060028 /* SDWebImageDownloaderOperation.m in Sources */,
 				AE7FED471C7D635100060028 /* UIView+WebCacheOperation.m in Sources */,
-				AE4B943C1C7EBCFF00B66AB6 /* MainViewController.m in Sources */,
 				AE9575511C85979F003EA0E5 /* AccountQuestionsViewController.m in Sources */,
 				AE7FED3D1C7D635100060028 /* SDWebImageDownloader.m in Sources */,
 				AE95754D1C8592B4003EA0E5 /* QPSApiObject+Extension.m in Sources */,

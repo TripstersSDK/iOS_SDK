@@ -18,7 +18,8 @@
 - (void)setUp {
     [super setUp];
     // Put setup code here. This method is called before the invocation of each test method in the class.
-     [QPSApi registerApp:@"test"];
+    [QPSApi registerApp:nil appId:@"beichen" withMode:QPSDataModeAll isDebug:YES];
+    
 }
 
 - (void)tearDown {

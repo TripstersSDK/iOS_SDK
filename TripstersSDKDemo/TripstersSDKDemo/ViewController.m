@@ -35,7 +35,7 @@
 
 - (void)handleNotification:(NSNotification *)notification {
     if (self.dataSource.count > 1) {
-        self.dataSource = @[@"已登陆",@"问答",@"我的提问",@"我的回答", @"我收到的回复(有未读)",@"退出登录"];
+        self.dataSource = @[@"问答",@"我的(有新的回答)"];
         [self.tableView reloadData];
     }
 }
@@ -59,11 +59,12 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-
     if (indexPath.row == 0) {
         QuestionListViewController *questionList = [[QuestionListViewController alloc] init];
         [self.navigationController pushViewController:questionList animated:YES];
     } else if (indexPath.row == 1) {
+        self.dataSource = @[@"问答",@"我的"];
+        [self.tableView reloadData];
         UIStoryboard *story = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
         AccountInfoViewController *infoVC  = [story instantiateViewControllerWithIdentifier:@"AccountInfoViewController"];
         [self.navigationController pushViewController:infoVC animated:YES];
