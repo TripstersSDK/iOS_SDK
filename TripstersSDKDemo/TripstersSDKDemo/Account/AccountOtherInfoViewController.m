@@ -38,10 +38,12 @@
     } else if (indexPath.section == 1 && indexPath.row == 0) {
         AccountQuestionsViewController *questionList = [[AccountQuestionsViewController alloc] init];
         questionList.title = @"ta的提问";
+        questionList.user = self.user;
         [self.navigationController pushViewController:questionList animated:YES];
     } else if (indexPath.section == 1 && indexPath.row == 1) {
         AccountAnswersViewController *answerList = [[AccountAnswersViewController alloc] init];
         answerList.title = @"ta的回答";
+        answerList.user = self.user;
         [self.navigationController pushViewController:answerList animated:YES];
     }
 }

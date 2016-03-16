@@ -16,13 +16,12 @@
 
 @implementation AppDelegate
 
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
 //    self.window.backgroundColor = [UIColor whiteColor];
     
     //注册应用
-    [QPSApi registerApp:launchOptions appId:@"beichen" withMode:QPSDataModeAll isDebug:YES];
+    [QPSApi registerApp:launchOptions appId:@"test" withMode:QPSDataModeAll isDebug:YES];
     
     //iOS8+ register APNS
     if (AVAILABLE_IOS8) {
