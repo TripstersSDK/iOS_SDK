@@ -22,11 +22,12 @@
  * @param
  *     launchOptions - App 启动时系统提供的参数，表明了 App 是通过什么方式启动的
  *  @param appid 开放平台应用id
- *  @param mode 数据获取模式 QPSDataModeOwn ，QPSDataModeAll
+ *  @param dataMode 数据获取模式 QPSDataModeOwn ，QPSDataModeAll
+ *  @param pushMode 推送模式
  *  @param debug 调试时请设置YES, 发布时应用设置NO
  *
  */
-+(BOOL)registerApp:(NSDictionary *)launchOptions appId:(NSString *)appid withMode:(QPSDataMode *)mode isDebug:(BOOL)debug;
++(BOOL)registerApp:(NSDictionary *)launchOptions appId:(NSString *)appid dataMode:(QPSDataMode *)dataMode pushMode:(QPSPushMode)pushMode isDebug:(BOOL)debug;
 
 /*!
  *  用户认证
