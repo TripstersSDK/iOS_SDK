@@ -7,29 +7,52 @@ TripstersSDK_Simulator      模拟器和真机都可运行SDK， 调试时使用
 TripstersSDKDemo             demo工程  
 TripstersSDK_ClassDoc       类文档
 
-## 使用说明
-### 1.配置SDK  
-  1）将libTripstersSDK.a , QPSApi.h ,QPSApiObject.h 文件加入工程。
+##iOS接入指南
+注：本文为趣皮士SDK的新手使用教程，只涉及教授SDK的使用方法，默认读者已经熟悉XCode开发工具的基本使用方法，以及具有一定的编程知识基础等。  
 
-  2）工程中target->Other linker flags 添加 -ObjC  
-  
-  3）info.plist 中设置允许 http网络请求  
+###1.向趣皮士注册你的应用程序id  
+请发送邮件到wendong.li@tripsters.cn 进行登记，邮件内容包括：  
+公司名称：xxxx  
+申请人姓名：xxxx    
+联系电话：xxxx  
+联系邮箱：xxxx  
+iOS端 需要将开发推送证书和发布推送证书两个.pem文件添加成附件一并发送过来。  
+趣皮士审核后会回复邮件将AppID发送过来,获得AppID后，可立即用于开发。
 
-### 2.初始化SDK  
-1）程序启动时调用初始化函数      
+###2.下载趣皮士SDK文件  
+SDK文件包括 libTripstersSDK.a，QPSApi.h，QPSApiObject.h 三个。  
+请在GitHub下载最新SDK包  
+
+###3.搭建开发环境
+[1] 在XCode中建立你的工程。  
+[2] 将SDK文件中包含的 libTripstersSDK.a，QPSApi.h，QPSApiObject.h 三个文件添加到你所建的工程中（如下图所示，建立了一个名为Test 的工程，并把以上三个文件添加到Test文件夹下）。  
+(注：请使用xCode4.5及以上版本)  
+![image](https://github.com/TripstersSDK/tripsters-open-source/blob/master/Picture/tripsters-ios-sdk-1.png?raw=true)
+
+[3] 在Xcode中，选择你的工程设置项，选中“TARGETS”一栏，选择Build Setting，在Search Paths中添加 libTripstersSDK.a ，QPSApi.h，QPSApiObject.h 三个文件所在位置（如下图所示）。  
+![image](https://github.com/TripstersSDK/tripsters-open-source/blob/master/Picture/tripsters-ios-sdk-2.png?raw=true)
+
+[4] 在Xcode中，选择你的工程设置项，选中“TARGETS”一栏，在“Build Setting”标签栏的“Other linker flags“添加“-ObjC”（如下图所示）。  
+![image](https://github.com/TripstersSDK/tripsters-open-source/blob/master/Picture/tripsters-ios-sdk-3.png?raw=true)
+
+[5]Xcode7.0及其以上版本，选择你的工程设置项，选中“TARGETS”一栏，在“info”标签栏的“Custom iOS Target Properties”中设置允许发送http请求（如下图所示）。  
+![image](https://github.com/TripstersSDK/tripsters-open-source/blob/master/Picture/tripsters-ios-sdk-4.png?raw=true)
+
+###4.在代码中使用SDK
+[1] 要使你的程序启动后能使用趣皮士SDK，必须在代码中注册你的id。（如下代码所示，在 AppDelegate 的 didFinishLaunchingWithOptions 函数中向趣皮士注册id）。  
 ```objc
     - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
         //注册应用
-        [QPSApi registerApp:launchOptions appId:@"beichen" withMode:QPSDataModeAll isDebug:YES];
+        [QPSApi registerApp:launchOptions appId:@"test" dataMode:QPSDataModeAll pushMode:QPSPushModeDevelopment isDebug:YES];
         return YES;
     }
 ```
 
-2）注册推送，调用QPSApi的接口处理推送  
+[2] 要是你的程序能收到趣皮士的推送，必须在代码中注册推送，并用趣皮士SDK接口上传推送Token  (如下代码所示)
 ```objc
     - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
         //注册应用
-        [QPSApi registerApp:launchOptions appId:@"beichen" withMode:QPSDataModeAll isDebug:YES];
+        [QPSApi registerApp:launchOptions appId:@"test" dataMode:QPSDataModeAll pushMode:QPSPushModeDevelopment isDebug:YES];
         //iOS8+ register APNS
         if (AVAILABLE_IOS8) {
             UIUserNotificationType notificationTypes = (UIUserNotificationTypeBadge | UIUserNotificationTypeSound | UIUserNotificationTypeAlert);
