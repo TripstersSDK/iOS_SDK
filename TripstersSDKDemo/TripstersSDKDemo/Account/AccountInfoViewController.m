@@ -47,10 +47,10 @@
         NSString *isLogin = [[NSUserDefaults standardUserDefaults] objectForKey:@"login"];
         if (isLogin == nil) {  //未登录，去登录
             
-            //1.调用登陆接口获得了用户信息
+            //1.假设接入应用调用自家登陆接口 获得了用户信息DemoUserInfo
             DemoUserInfo *userInfo = [DemoAccountManager loginFunc];
             
-            //2.用用户信息调趣皮士接口，获取问答接口的授权
+            //2.使用用户信息调趣皮士接口，获取问答接口的授权
             QPSAuthReq *req = [QPSAuthReq new];
             req.openid = userInfo.userID; //必填  /** 接入平台自身用户的唯一ID  */
             req.avatar = userInfo.avatar; //必填
@@ -64,6 +64,7 @@
             
             [QPSApi loginWithReq:req success:^(QPSAuthReq *req,QPSUser *user) {
                 [[NSUserDefaults standardUserDefaults] setObject:@"yes" forKey:@"login"];
+                //获得授权后，保存部分趣皮士返回的用户信息
                 userInfo.country = user.country;
                 userInfo.identity = user.identity;
                 [DemoUserInfo saveUserInfo:userInfo];
