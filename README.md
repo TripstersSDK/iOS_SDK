@@ -2,10 +2,10 @@
 
 一个便于第三方应用使用趣皮士问答API的SDK  
 
-TripstersSDK_Device          真机上可运行的SDK，发布应用时使用  
-TripstersSDK_Simulator      模拟器和真机都可运行SDK， 调试时使用  
-TripstersSDKDemo             demo工程  
-TripstersSDK_ClassDoc       类文档
+TripstersSDK_Device：真机上可运行的SDK，发布应用时使用  
+TripstersSDK_Simulator：模拟器和真机都可运行SDK， 调试时使用  
+TripstersSDKDemo：demo工程  
+TripstersSDK_ClassDoc：类文档
 
 ##iOS接入指南
 注：本文为趣皮士SDK的新手使用教程，只涉及教授SDK的使用方法，默认读者已经熟悉XCode开发工具的基本使用方法，以及具有一定的编程知识基础等。  
@@ -48,7 +48,7 @@ SDK文件包括 libTripstersSDK.a，QPSApi.h，QPSApiObject.h 三个。
     }
 ```
 
-[2] 要是你的程序能收到趣皮士的推送，必须在代码中注册推送，并用趣皮士SDK接口上传推送Token  (如下代码所示)
+[2] 要使你的程序能收到趣皮士的推送，必须在代码中注册推送，并用趣皮士SDK接口上传推送Token  (如下代码所示)
 ```objc
     - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
         //注册应用
@@ -78,7 +78,8 @@ SDK文件包括 libTripstersSDK.a，QPSApi.h，QPSApiObject.h 三个。
     }
 ```
 
-### 3.接口的使用  
+### 5.接口的使用  
+[1] 趣皮士SDK的接口，都是通过构造一个请求体，
 1）账号登录和退出接口  
     被接入应用应该在账号登录和退出接口中 加入QPSApi的登录和退出 让趣皮士SDK的账号状态与接入应用账号状态一致  
 ```objc
