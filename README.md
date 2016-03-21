@@ -1,7 +1,10 @@
-# iOS SDK
+# iOS SDK 概述
+一个便于第三方应用使用趣皮士问答API的SDK。  
+为了方便第三方开发者快速集成趣皮士 SDK，我们提供了QQ群，协助开发者进行集成：  
+QQ群：290944264  
+另外，关于SDK的Bug反馈、用户体验、以及好的建议，请大家尽量提交到 Github 上，我们会尽快解决。  
 
-一个便于第三方应用使用趣皮士问答API的SDK  
-
+Github上文件夹目录：  
 TripstersSDK_Device：真机上可运行的SDK，发布应用时使用  
 TripstersSDK_Simulator：模拟器和真机都可运行SDK， 调试时使用  
 TripstersSDKDemo：demo工程  
