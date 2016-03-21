@@ -79,16 +79,34 @@ SDK文件包括 libTripstersSDK.a，QPSApi.h，QPSApiObject.h 三个。
 ```
 
 ### 5.接口的使用  
-[1] 趣皮士SDK的接口，都是通过构造一个请求体，
-1）账号登录和退出接口  
-    被接入应用应该在账号登录和退出接口中 加入QPSApi的登录和退出 让趣皮士SDK的账号状态与接入应用账号状态一致  
+[1] 趣皮士SDK的接口，都是通过构造一个请求体，发起请求获得数据。  
+[2] 例如账号登录和退出接口，接入应用应该在账号登录和退出接口中 加入QPSApi的登录和退出 让趣皮士SDK的账号状态与接入应用账号状态一致  
 ```objc
-    [QPSApi loginWithReq:req success:^(QPSAuthReq *req) {
-        //登录成功
-    } failure:^(QPSAuthReq *req, NSError *error) {
-        //登录失败
-    }];  
+    //1.假设接入应用调用自家登陆接口 获得了用户信息DemoUserInfo  
+    DemoUserInfo *userInfo = [DemoAccountManager loginFunc];
 
+    //2.使用用户信息调趣皮士接口，获取问答接口的授权  
+    QPSAuthReq *req = [QPSAuthReq new];
+    req.openid = userInfo.userID; //必填  /** 接入平台自身用户的唯一ID  */
+    req.avatar = userInfo.avatar; //必填
+    req.nickname = userInfo.nickname; //必填
+    if ([userInfo.gender isEqualToString:@"m"]) {
+        req.gender = QPSUserGenderMale; //必填
+    } else {
+        req.gender = QPSUserGenderFemale; //必填
+    }
+    req.location = userInfo.location; //可选
+
+    [QPSApi loginWithReq:req success:^(QPSAuthReq *req,QPSUser *user) {
+        //获得授权后，保存部分趣皮士返回的用户信息
+        userInfo.country = user.country;
+        userInfo.identity = user.identity;
+        [DemoUserInfo saveUserInfo:userInfo];
+    } failure:^(QPSAuthReq *req, NSError *error) {
+        [self showNotificationWithText:error.localizedDescription];
+    }];
+
+    //3退出登陆，在接入应用调用自身退出登陆接口后，调用趣皮士SDK的退出登陆接口。  
     [QPSApi logoutWithSuccessHandler:^{
         //登出成功
     } failure:^(NSError *error) {
@@ -96,6 +114,6 @@ SDK文件包括 libTripstersSDK.a，QPSApi.h，QPSApiObject.h 三个。
     }];
 ```
 
-2）利用QPSApi.h中的其它接口，获取数据。具体使用请见demo
+[3] 利用QPSApi.h中的其它接口，获取数据。具体使用请见demo
    
 
