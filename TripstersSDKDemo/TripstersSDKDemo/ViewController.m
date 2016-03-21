@@ -25,7 +25,7 @@
     
     self.dataSource = @[@"问答",@"我的"];
     
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleNotification:) name:NewAnswerRecivedNotification object:nil];
+//[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleNotification:) name:NewAnswerRecivedNotification object:nil];
 }
 
 - (void)dealloc
@@ -33,12 +33,12 @@
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
-- (void)handleNotification:(NSNotification *)notification {
-    if (self.dataSource.count > 1) {
-        self.dataSource = @[@"问答",@"我的(有新的回答)"];
-        [self.tableView reloadData];
-    }
-}
+//- (void)handleNotification:(NSNotification *)notification {
+//    if (self.dataSource.count > 1) {
+//        self.dataSource = @[@"问答",@"我的(有新的回答)"];
+//        [self.tableView reloadData];
+//    }
+//}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.dataSource.count;
@@ -65,7 +65,7 @@
     } else if (indexPath.row == 1) {
         self.dataSource = @[@"问答",@"我的"];
         [self.tableView reloadData];
-        UIStoryboard *story = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        UIStoryboard *story = [UIStoryboard storyboardWithName:@"MainStory" bundle:nil];
         AccountInfoViewController *infoVC  = [story instantiateViewControllerWithIdentifier:@"AccountInfoViewController"];
         [self.navigationController pushViewController:infoVC animated:YES];
     }

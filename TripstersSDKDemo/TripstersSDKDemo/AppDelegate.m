@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "Macro.h"
 #import "QPSApi.h"
+#import "ViewController.h"
 
 @interface AppDelegate ()
 
@@ -18,10 +19,16 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-//    self.window.backgroundColor = [UIColor whiteColor];
-    
+
     //注册应用
+    #warning 请替换成自己的appid
     [QPSApi registerApp:launchOptions appId:@"test" dataMode:QPSDataModeAll pushMode:QPSPushModeDevelopment isDebug:YES];
+    
+    ViewController *viewController = [[ViewController alloc] init];
+    UINavigationController *navi = [[UINavigationController alloc] initWithRootViewController:viewController];
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    self.window.rootViewController = navi;
+    [self.window makeKeyAndVisible];
     
     //iOS8+ register APNS
     if (AVAILABLE_IOS8) {
@@ -34,7 +41,6 @@
     }
     
     [[UINavigationBar appearance] setTranslucent:NO];
-    
     return YES;
 }
 
@@ -43,6 +49,11 @@
 }
 
 - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
+    NSString *pushToken = [[[[deviceToken description]
+                             stringByReplacingOccurrencesOfString:@"<" withString:@""]
+                            stringByReplacingOccurrencesOfString:@">" withString:@""]
+                           stringByReplacingOccurrencesOfString:@" " withString:@""] ;
+    [UIPasteboard generalPasteboard].string = pushToken;
     [QPSApi registerDeviceToken:deviceToken];
 }
 

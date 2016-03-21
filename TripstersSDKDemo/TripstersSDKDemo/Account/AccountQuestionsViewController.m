@@ -83,7 +83,7 @@
 - (void)cellUserInfoDidSelected:(QuestionTableViewCell *)cell {
     NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
     QPSQuestion *question = [self.dataArray objectAtIndex:indexPath.row];
-    UIStoryboard *story = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    UIStoryboard *story = [UIStoryboard storyboardWithName:@"MainStory" bundle:nil];
     AccountOtherInfoViewController *infoVC  = [story instantiateViewControllerWithIdentifier:@"AccountOtherInfoViewController"];
     infoVC.user = question.asker;
     [self pushViewController:infoVC];

@@ -99,7 +99,7 @@
 }
 
 - (void)sendAnswer {
-    UIStoryboard *story = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    UIStoryboard *story = [UIStoryboard storyboardWithName:@"MainStory" bundle:nil];
     SendAnswerViewController *sendAnswerVC = [story instantiateViewControllerWithIdentifier:@"SendAnswerViewController"];
     sendAnswerVC.question = self.request.question;
     [self pushViewController:sendAnswerVC];
@@ -144,7 +144,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:true];
     QPSAnswer *answer = [self.dataArray objectAtIndex:indexPath.row];
-    UIStoryboard *story = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    UIStoryboard *story = [UIStoryboard storyboardWithName:@"MainStory" bundle:nil];
     SendReAnswerViewController *sendReAnswerVC = [story instantiateViewControllerWithIdentifier:@"SendReAnswerViewController"];
     sendReAnswerVC.question = self.question;
     sendReAnswerVC.answer = answer;
@@ -154,7 +154,7 @@
 - (void)cellUserInfoDidSelected:(AnswerTableViewCell *)cell {
     NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
     QPSAnswer *answer = [self.dataArray objectAtIndex:indexPath.row];
-    UIStoryboard *story = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    UIStoryboard *story = [UIStoryboard storyboardWithName:@"MainStory" bundle:nil];
     AccountOtherInfoViewController *infoVC  = [story instantiateViewControllerWithIdentifier:@"AccountOtherInfoViewController"];
     infoVC.user = answer.answerer;
     [self pushViewController:infoVC];

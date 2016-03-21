@@ -85,7 +85,7 @@
 - (void)cellUserInfoDidSelected:(AnswerTableViewCell *)cell {
     NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
     QPSAnswer *answer = [self.dataArray objectAtIndex:indexPath.row];
-    UIStoryboard *story = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    UIStoryboard *story = [UIStoryboard storyboardWithName:@"MainStory" bundle:nil];
     AccountOtherInfoViewController *infoVC  = [story instantiateViewControllerWithIdentifier:@"AccountOtherInfoViewController"];
     infoVC.user = answer.answerer;
     [self pushViewController:infoVC];

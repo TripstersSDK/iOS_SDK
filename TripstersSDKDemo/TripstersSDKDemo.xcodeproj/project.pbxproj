@@ -79,7 +79,7 @@
 		AE93F3E61C76C3A6009845A0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AE93F3E51C76C3A6009845A0 /* main.m */; };
 		AE93F3E91C76C3A6009845A0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AE93F3E81C76C3A6009845A0 /* AppDelegate.m */; };
 		AE93F3EC1C76C3A6009845A0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE93F3EB1C76C3A6009845A0 /* ViewController.m */; };
-		AE93F3EF1C76C3A6009845A0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE93F3ED1C76C3A6009845A0 /* Main.storyboard */; };
+		AE93F3EF1C76C3A6009845A0 /* MainStory.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE93F3ED1C76C3A6009845A0 /* MainStory.storyboard */; };
 		AE93F3FF1C76C3A6009845A0 /* TripstersSDKDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AE93F3FE1C76C3A6009845A0 /* TripstersSDKDemoTests.m */; };
 		AE93F40A1C76C3A6009845A0 /* TripstersSDKDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = AE93F4091C76C3A6009845A0 /* TripstersSDKDemoUITests.m */; };
 		AE9575461C857729003EA0E5 /* SendReAnswerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE9575451C857729003EA0E5 /* SendReAnswerViewController.m */; };
@@ -223,7 +223,7 @@
 		AE93F3E81C76C3A6009845A0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = ../AppDelegate.m; sourceTree = "<group>"; };
 		AE93F3EA1C76C3A6009845A0 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = ../ViewController.h; sourceTree = "<group>"; };
 		AE93F3EB1C76C3A6009845A0 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = ../ViewController.m; sourceTree = "<group>"; };
-		AE93F3EE1C76C3A6009845A0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AE93F3EE1C76C3A6009845A0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainStory.storyboard; sourceTree = "<group>"; };
 		AE93F3F51C76C3A6009845A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Info.plist; sourceTree = "<group>"; };
 		AE93F3FA1C76C3A6009845A0 /* TripstersSDKDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TripstersSDKDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE93F3FE1C76C3A6009845A0 /* TripstersSDKDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TripstersSDKDemoTests.m; sourceTree = "<group>"; };
@@ -312,7 +312,7 @@
 				AE93F3EA1C76C3A6009845A0 /* ViewController.h */,
 				AE93F3EB1C76C3A6009845A0 /* ViewController.m */,
 				AE7FED141C7C54DA00060028 /* Images.xcassets */,
-				AE93F3ED1C76C3A6009845A0 /* Main.storyboard */,
+				AE93F3ED1C76C3A6009845A0 /* MainStory.storyboard */,
 				AE93F3F51C76C3A6009845A0 /* Info.plist */,
 			);
 			path = Main;
@@ -437,12 +437,12 @@
 		AE93F3E31C76C3A6009845A0 /* TripstersSDKDemo */ = {
 			isa = PBXGroup;
 			children = (
-				AE4B943D1C7EC89800B66AB6 /* Source */,
 				AE4B94391C7EBC9E00B66AB6 /* Main */,
-				AE9C78451C78510700FEC598 /* Public */,
-				AE9C78251C78100100FEC598 /* ThirdParty */,
 				AE95754E1C859766003EA0E5 /* Account */,
 				AE9C78211C7723C000FEC598 /* Q&A */,
+				AE9C78451C78510700FEC598 /* Public */,
+				AE4B943D1C7EC89800B66AB6 /* Source */,
+				AE9C78251C78100100FEC598 /* ThirdParty */,
 			);
 			path = TripstersSDKDemo;
 			sourceTree = "<group>";
@@ -727,7 +727,7 @@
 				AE9C78331C78100100FEC598 /* refreshgif@2x.gif in Resources */,
 				AE4B94701C842FA900B66AB6 /* NotificationBackgroundMessage@2x.png in Resources */,
 				AE9C78301C78100100FEC598 /* blackArrow@2x.png in Resources */,
-				AE93F3EF1C76C3A6009845A0 /* Main.storyboard in Resources */,
+				AE93F3EF1C76C3A6009845A0 /* MainStory.storyboard in Resources */,
 				AE4B94731C842FA900B66AB6 /* NotificationBackgroundSuccessIcon.png in Resources */,
 				AE4B94751C842FA900B66AB6 /* NotificationBackgroundWarning.png in Resources */,
 			);
@@ -859,12 +859,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		AE93F3ED1C76C3A6009845A0 /* Main.storyboard */ = {
+		AE93F3ED1C76C3A6009845A0 /* MainStory.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				AE93F3EE1C76C3A6009845A0 /* Base */,
 			);
-			name = Main.storyboard;
+			name = MainStory.storyboard;
 			path = ..;
 			sourceTree = "<group>";
 		};

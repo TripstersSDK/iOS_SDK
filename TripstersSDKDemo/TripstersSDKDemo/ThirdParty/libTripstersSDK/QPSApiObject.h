@@ -33,8 +33,8 @@ typedef NS_ENUM(NSInteger,QPSCityLevel) {
  *   当前推送的环境
  */
 typedef NS_ENUM(NSInteger, QPSPushMode){
-    QPSPushModeDevelopment = 0, // 开发测试环境
-    QPSPushModeProduction = 1, // AppStore 上线环境  AdHoc 内部测试用的生产环境
+    QPSPushModeDevelopment = 1, // 开发测试环境
+    QPSPushModeProduction = 2, // AppStore 上线环境  AdHoc 内部测试用的生产环境
 };
 
 /* 有新的回复，通知 */
